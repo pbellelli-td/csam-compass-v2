@@ -1,0 +1,138 @@
+{
+  "acc_001": {
+    "active_users": 8,
+    "total_seats": 11,
+    "last_login_date": "2026-05-17",
+    "features": {
+      "workflows_enabled": true,
+      "automations_enabled": true,
+      "client_portal_enabled": true,
+      "bulk_email_enabled": false
+    },
+    "workflow_count": 14,
+    "automation_count": 6,
+    "client_portal_adoption_pct": 0.78,
+    "documents_uploaded_30d": 142,
+    "tasks_completed_30d": 87,
+    "messages_sent_30d": 63
+  },
+  "acc_002": {
+    "active_users": 3,
+    "total_seats": 8,
+    "last_login_date": "2026-04-29",
+    "features": {
+      "workflows_enabled": true,
+      "automations_enabled": false,
+      "client_portal_enabled": true,
+      "bulk_email_enabled": false
+    },
+    "workflow_count": 2,
+    "automation_count": 0,
+    "client_portal_adoption_pct": 0.25,
+    "documents_uploaded_30d": 18,
+    "tasks_completed_30d": 11,
+    "messages_sent_30d": 4
+  },
+  "acc_003": {
+    "active_users": 11,
+    "total_seats": 20,
+    "last_login_date": "2026-05-13",
+    "features": {
+      "workflows_enabled": true,
+      "automations_enabled": true,
+      "client_portal_enabled": true,
+      "bulk_email_enabled": true
+    },
+    "workflow_count": 31,
+    "automation_count": 14,
+    "client_portal_adoption_pct": 0.62,
+    "documents_uploaded_30d": 289,
+    "tasks_completed_30d": 201,
+    "messages_sent_30d": 118
+  },
+  "acc_004": {
+    "active_users": 10,
+    "total_seats": 11,
+    "last_login_date": "2026-05-19",
+    "features": {
+      "workflows_enabled": true,
+      "automations_enabled": true,
+      "client_portal_enabled": true,
+      "bulk_email_enabled": true
+    },
+    "workflow_count": 22,
+    "automation_count": 11,
+    "client_portal_adoption_pct": 0.92,
+    "documents_uploaded_30d": 198,
+    "tasks_completed_30d": 156,
+    "messages_sent_30d": 94
+  },
+  "acc_005": {
+    "active_users": 19,
+    "total_seats": 20,
+    "last_login_date": "2026-05-18",
+    "features": {
+      "workflows_enabled": true,
+      "automations_enabled": true,
+      "client_portal_enabled": true,
+      "bulk_email_enabled": false
+    },
+    "workflow_count": 18,
+    "automation_count": 8,
+    "client_portal_adoption_pct": 0.71,
+    "documents_uploaded_30d": 176,
+    "tasks_completed_30d": 132,
+    "messages_sent_30d": 78
+  },
+  "acc_006": {
+    "active_users": 6,
+    "total_seats": 10,
+    "last_login_date": "2026-04-05",
+    "features": {
+      "workflows_enabled": false,
+      "automations_enabled": false,
+      "client_portal_enabled": true,
+      "bulk_email_enabled": false
+    },
+    "workflow_count": 1,
+    "automation_count": 0,
+    "client_portal_adoption_pct": 0.30,
+    "documents_uploaded_30d": 9,
+    "tasks_completed_30d": 5,
+    "messages_sent_30d": 2
+  },
+  "acc_007": {
+    "active_users": 9,
+    "total_seats": 11,
+    "last_login_date": "2026-05-15",
+    "features": {
+      "workflows_enabled": true,
+      "automations_enabled": true,
+      "client_portal_enabled": true,
+      "bulk_email_enabled": false
+    },
+    "workflow_count": 16,
+    "automation_count": 7,
+    "client_portal_adoption_pct": 0.80,
+    "documents_uploaded_30d": 154,
+    "tasks_completed_30d": 112,
+    "messages_sent_30d": 67
+  },
+  "acc_008": {
+    "active_users": 17,
+    "total_seats": 25,
+    "last_login_date": "2026-05-08",
+    "features": {
+      "workflows_enabled": true,
+      "automations_enabled": false,
+      "client_portal_enabled": true,
+      "bulk_email_enabled": false
+    },
+    "workflow_count": 9,
+    "automation_count": 2,
+    "client_portal_adoption_pct": 0.55,
+    "documents_uploaded_30d": 201,
+    "tasks_completed_30d": 143,
+    "messages_sent_30d": 52
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "acc_001": [
+    {
+      "call_id": "f_001_1",
+      "call_date": "2026-04-22",
+      "duration_min": 32,
+      "participants": ["Julia Rossi (CSAM)", "Mike Anderson (Owner)", "Sarah Chen (Office Manager)"],
+      "transcript_summary": "Quarterly business review. Client is happy overall — workflows are running smoothly for 1040 season. Main ask is bulk email capability for deadline reminders. Sarah flagged that two new hires are joining in September, which may trigger a seat upgrade conversation.",
+      "topics": ["workflow setup", "new hire onboarding", "bulk email", "QBR"],
+      "sentiment": "positive",
+      "action_items": ["Send bulk email training video", "Follow up on seat expansion in August"]
+    }
+  ],
+  "acc_002": [
+    {
+      "call_id": "f_002_1",
+      "call_date": "2026-04-18",
+      "duration_min": 24,
+      "participants": ["Maria Chen (CSAM)", "Tom Brooks (Partner)", "Linda Yuen (Operations)"],
+      "transcript_summary": "Difficult call. Team reverted to email-based workflow management because TaxDome felt 'too complex' during busy season. Tom admitted they skipped the onboarding sessions. Linda mentioned they're evaluating a competitor. Maria offered a re-onboarding session which Tom was lukewarm about — said they'd 'think about it'.",
+      "topics": ["adoption issues", "competitive threat", "re-onboarding"],
+      "sentiment": "negative",
+      "action_items": ["Send simplified workflow guide", "Schedule 1:1 with Linda for pain point discovery", "Escalate competitive risk flag to team lead"]
+    }
+  ],
+  "acc_003": [
+    {
+      "call_id": "f_003_1",
+      "call_date": "2026-05-09",
+      "duration_min": 41,
+      "participants": ["Valentina Cruz (CSAM)", "Rachel Kim (Managing Partner)", "James Wu (Operations Director)"],
+      "transcript_summary": "Strong call. Rachel shared that the automation they built for client onboarding is saving 3 hours per new client and they've onboarded 12 new clients since January. James is leading a Q3 hiring push (3 new staff) and explicitly asked about adding seats. Valentina floated moving to the next tier which Rachel was receptive to.",
+      "topics": ["automation ROI", "seat expansion", "tier upgrade", "Q3 hiring"],
+      "sentiment": "very positive",
+      "action_items": ["Send upgrade pricing for next tier", "Follow up in 30 days on hiring timeline"]
+    }
+  ],
+  "acc_004": [
+    {
+      "call_id": "f_004_1",
+      "call_date": "2026-05-12",
+      "duration_min": 19,
+      "participants": ["Julia Rossi (CSAM)", "Greg Davidson (Owner)"],
+      "transcript_summary": "Quick check-in, very positive. Greg says TaxDome is now core infrastructure for the firm — used for billing, task management, and client comms. Flagged they're hiring 2 juniors and are currently at 10/11 seats. Julia noted they'll need at least 2 more seats immediately and potentially 5 by year end.",
+      "topics": ["seat capacity", "hiring", "expansion"],
+      "sentiment": "very positive",
+      "action_items": ["Send seat upgrade options and pricing", "Schedule renewal/upgrade call for June"]
+    }
+  ],
+  "acc_005": [
+    {
+      "call_id": "f_005_1",
+      "call_date": "2026-05-10",
+      "duration_min": 28,
+      "participants": ["Paolo Marino (CSAM)", "Chris Eastman (Partner)", "Aiko Tanaka (Office Manager)"],
+      "transcript_summary": "High-urgency call. Firm is at 19/20 seats with 4 new hires in the last 2 months. Chris wants to jump to a 30-seat plan before renewal June 15. Aiko mentioned they're logging out to share credentials with new staff. Paolo confirmed expansion pricing and framed it as a must-do before renewal.",
+      "topics": ["seat expansion", "renewal", "credential sharing risk"],
+      "sentiment": "positive",
+      "action_items": ["Send 30-seat upgrade proposal by May 22", "Process expansion before June 15 renewal"]
+    }
+  ],
+  "acc_006": [],
+  "acc_007": [
+    {
+      "call_id": "f_007_1",
+      "call_date": "2026-05-13",
+      "duration_min": 22,
+      "participants": ["Valentina Cruz (CSAM)", "Maria Green (Owner)"],
+      "transcript_summary": "Solid quarterly check-in. Maria is happy with adoption — clients are using the portal actively and doc turnaround has improved. She hasn't tried bulk email yet and wasn't sure it applied to her. Valentina walked through the deadline reminder use case and Maria seemed genuinely interested.",
+      "topics": ["client portal", "bulk email demo", "QBR"],
+      "sentiment": "positive",
+      "action_items": ["Send bulk email template for deadline reminders", "Follow up in 2 weeks"]
+    }
+  ],
+  "acc_008": [
+    {
+      "call_id": "f_008_1",
+      "call_date": "2026-04-28",
+      "duration_min": 35,
+      "participants": ["Paolo Marino (CSAM)", "Priya Sharma (Operations Manager)", "David Chen (departing)"],
+      "transcript_summary": "Transition call. David Chen introduced Priya Sharma as his replacement. Priya is conducting a full vendor review ahead of June 30 renewal — TaxDome is one of 4 tools under review. She had detailed questions about API integrations, security certifications, and contract flexibility. David said the team likes the platform but Priya was noticeably more skeptical and mentioned they're 'doing their due diligence'. Paolo sent a security overview deck but has not heard back.",
+      "topics": ["executive sponsor change", "vendor review", "security questions", "renewal risk"],
+      "sentiment": "neutral/cautious",
+      "action_items": ["Follow up with Priya directly", "Send updated security + compliance deck", "Involve AE for strategic renewal support", "Escalate to CSAM lead as renewal risk"]
+    }
+  ]
+}

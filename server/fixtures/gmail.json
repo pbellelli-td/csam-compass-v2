@@ -1,0 +1,172 @@
+{
+  "acc_001": [
+    {
+      "thread_id": "t_001_1",
+      "subject": "Re: Workflow templates — tax season setup",
+      "date": "2026-05-14",
+      "direction": "inbound",
+      "snippet": "Thanks for sending those templates over. We got the 1040 workflow running yesterday and the team loves the automation. Can you send the one for business returns too?"
+    },
+    {
+      "thread_id": "t_001_2",
+      "subject": "Question about client portal customization",
+      "date": "2026-05-08",
+      "direction": "inbound",
+      "snippet": "Hi, one of our staff is asking whether we can add our logo to the client-facing portal. Is that on the business plan?"
+    },
+    {
+      "thread_id": "t_001_3",
+      "subject": "QBR follow-up — action items",
+      "date": "2026-04-22",
+      "direction": "outbound",
+      "snippet": "Great catching up today. As agreed: I'll send the bulk email training video, and you'll loop in Sarah for the onboarding of the two new hires."
+    }
+  ],
+  "acc_002": [
+    {
+      "thread_id": "t_002_1",
+      "subject": "We haven't been using TaxDome much",
+      "date": "2026-05-02",
+      "direction": "inbound",
+      "snippet": "Hi, just wanted to flag that the team has kind of gone back to our old email workflow. We're not sure TaxDome is saving us time yet. Is there a simpler way to set this up?"
+    },
+    {
+      "thread_id": "t_002_2",
+      "subject": "Re: Check-in — how are things going?",
+      "date": "2026-04-18",
+      "direction": "inbound",
+      "snippet": "Honestly not great. The onboarding felt rushed and we're still confused about workflows. We haven't migrated our client list over either."
+    },
+    {
+      "thread_id": "t_002_3",
+      "subject": "Renewal coming up in July",
+      "date": "2026-04-10",
+      "direction": "outbound",
+      "snippet": "Just a heads up that your renewal is coming up July 1. I'd love to schedule a call to make sure you're getting value before then."
+    }
+  ],
+  "acc_003": [
+    {
+      "thread_id": "t_003_1",
+      "subject": "Automation for onboarding new clients",
+      "date": "2026-05-16",
+      "direction": "inbound",
+      "snippet": "We've been playing with the automation rules and built a full onboarding sequence. It's saving us probably 3 hours per new client. Really happy with it."
+    },
+    {
+      "thread_id": "t_003_2",
+      "subject": "Re: Can we add more seats for the new hires?",
+      "date": "2026-05-09",
+      "direction": "inbound",
+      "snippet": "We're bringing on 3 more staff in Q3 — what does adding seats look like on our current plan?"
+    },
+    {
+      "thread_id": "t_003_3",
+      "subject": "Re: Seat fill / utilization",
+      "date": "2026-04-30",
+      "direction": "outbound",
+      "snippet": "Glad the automations are working well. On the seat question — I'll get you pricing options. We might also want to revisit which plan tier fits your growth."
+    }
+  ],
+  "acc_004": [
+    {
+      "thread_id": "t_004_1",
+      "subject": "Re: Love the new task view",
+      "date": "2026-05-17",
+      "direction": "inbound",
+      "snippet": "The team is using TaxDome for everything now — scheduling, billing, even our internal task tracking. Best decision we made last year."
+    },
+    {
+      "thread_id": "t_004_2",
+      "subject": "Need 2 more seats — adding junior staff",
+      "date": "2026-05-12",
+      "direction": "inbound",
+      "snippet": "We're at capacity. Bringing on two new juniors next month. What's the process to upgrade?"
+    }
+  ],
+  "acc_005": [
+    {
+      "thread_id": "t_005_1",
+      "subject": "Re: Are we able to expand?",
+      "date": "2026-05-15",
+      "direction": "inbound",
+      "snippet": "We're basically maxed on seats. Tax season brought in 4 new staff and we've been sharing logins which I know is not ideal. Can we get a quote for 30 seats?"
+    },
+    {
+      "thread_id": "t_005_2",
+      "subject": "Renewal question",
+      "date": "2026-05-10",
+      "direction": "inbound",
+      "snippet": "Our renewal is coming up June 15. We definitely want to stay — TaxDome has been transformational for us. But we need to sort out the seat situation first."
+    }
+  ],
+  "acc_006": [
+    {
+      "thread_id": "t_006_1",
+      "subject": "Is someone available to walk us through workflows?",
+      "date": "2026-05-01",
+      "direction": "inbound",
+      "snippet": "We signed up 6 months ago and we've mostly just been using it for document storage. A partner asked if we can use it more strategically — can we get a training session?"
+    },
+    {
+      "thread_id": "t_006_2",
+      "subject": "Re: Check-in April",
+      "date": "2026-04-14",
+      "direction": "outbound",
+      "snippet": "Following up on our call — I sent a recording of the workflow setup webinar. Let me know if it would help to do a live session with your team."
+    },
+    {
+      "thread_id": "t_006_3",
+      "subject": "No reply",
+      "date": "2026-04-07",
+      "direction": "outbound",
+      "snippet": "Hi again — just wanted to make sure you got my last message. Happy to find a time that works for the team. Even 30 min could get you unblocked."
+    }
+  ],
+  "acc_007": [
+    {
+      "thread_id": "t_007_1",
+      "subject": "Re: QBR notes",
+      "date": "2026-05-13",
+      "direction": "inbound",
+      "snippet": "All good on our end. The client portal has really helped with document collection — clients are responding way faster than before."
+    },
+    {
+      "thread_id": "t_007_2",
+      "subject": "Quick win — bulk email",
+      "date": "2026-05-06",
+      "direction": "outbound",
+      "snippet": "Noticed you haven't tried the bulk email feature yet. Given how many clients you message for deadlines, I think it could save you real time. Want me to do a quick demo?"
+    }
+  ],
+  "acc_008": [
+    {
+      "thread_id": "t_008_1",
+      "subject": "Re: Renewal — Harbor View",
+      "date": "2026-05-18",
+      "direction": "inbound",
+      "snippet": "We're evaluating options before the June 30 renewal. We like the platform but feel like we're not using it to its potential. Would want to see a roadmap before committing."
+    },
+    {
+      "thread_id": "t_008_2",
+      "subject": "Executive sponsor changed",
+      "date": "2026-05-05",
+      "direction": "inbound",
+      "snippet": "Just a heads up — David Chen who was our main TaxDome champion left the firm last month. The new ops manager, Priya Sharma, is reviewing all our tools."
+    },
+    {
+      "thread_id": "t_008_3",
+      "subject": "Re: Usage review",
+      "date": "2026-04-28",
+      "direction": "outbound",
+      "snippet": "Thanks for the update on David. Happy to schedule a call with Priya to walk through what the team has built and where there's room to grow. Availability this week?"
+    },
+    {
+      "thread_id": "t_008_4",
+      "subject": "No reply to last 2 outreaches",
+      "date": "2026-04-14",
+      "direction": "outbound",
+      "snippet": "Piera — flagging that Harbor View hasn't responded to my last two emails. Might be worth a call. Their renewal is June 30."
+    }
+  ]
+}
