@@ -1,45 +1,43 @@
-// Supabase service for the Monday Ritual tab.
-// Uses the REST API directly (no SDK dependency) with the anon key.
+// Supabase service — uses the official @supabase/supabase-js client.
 // Option A: RLS disabled, anon key has full read/write (internal tool).
-import axios from 'axios';
+import { createClient } from '@supabase/supabase-js';
 
-const URL = process.env.SUPABASE_URL;
-const KEY = process.env.SUPABASE_ANON_KEY;
+let _client = null;
 
-function client() {
-  if (!URL || !KEY) {
-    throw new Error('SUPABASE_URL / SUPABASE_ANON_KEY not configured');
-  }
-  return axios.create({
-    baseURL: `${URL}/rest/v1`,
-    headers: {
-      apikey: KEY,
-      Authorization: `Bearer ${KEY}`,
-      'Content-Type': 'application/json',
-    },
-  });
+function db() {
+  if (_client) return _client;
+  const url = process.env.SUPABASE_URL;
+  const key = process.env.SUPABASE_ANON_KEY;
+  if (!url || !key) throw new Error('SUPABASE_URL / SUPABASE_ANON_KEY not configured');
+  _client = createClient(url, key);
+  return _client;
 }
 
 export function isConfigured() {
-  return !!(URL && KEY);
+  return !!(process.env.SUPABASE_URL && process.env.SUPABASE_ANON_KEY);
+}
+
+function check(error, context) {
+  if (error) throw new Error(`[${context}] ${error.message}`);
+}
+
+// ── Weeks ──────────────────────────────────────────────────────────
+export async function getWeeks() {
+  const { data, error } = await db()
+    .from('ritual_accounts')
+    .select('week_of')
+    .order('week_of', { ascending: false });
+  check(error, 'getWeeks');
+  return [...new Set(data.map((r) => r.week_of))];
 }
 
 // ── Accounts ───────────────────────────────────────────────────────
-export async function getWeeks() {
-  const c = client();
-  const res = await c.get('/ritual_accounts', {
-    params: { select: 'week_of', order: 'week_of.desc' },
-  });
-  // distinct weeks
-  return [...new Set(res.data.map((r) => r.week_of))];
-}
-
 export async function getAccountsForWeek(weekOf) {
-  const c = client();
-  const params = { select: '*', order: 'score.desc' };
-  if (weekOf) params.week_of = `eq.${weekOf}`;
-  const res = await c.get('/ritual_accounts', { params });
-  return res.data;
+  const q = db().from('ritual_accounts').select('*').order('score', { ascending: false });
+  if (weekOf) q.eq('week_of', weekOf);
+  const { data, error } = await q;
+  check(error, 'getAccountsForWeek');
+  return data;
 }
 
 export async function getLatestWeekAccounts() {
@@ -50,59 +48,59 @@ export async function getLatestWeekAccounts() {
   return { weekOf, accounts };
 }
 
-// Upsert a full weekly snapshot. rows = array of account objects.
 export async function upsertSnapshot(rows) {
-  const c = client();
-  const res = await c.post('/ritual_accounts', rows, {
-    params: { on_conflict: 'week_of,account_id' },
-    headers: { Prefer: 'resolution=merge-duplicates,return=representation' },
-  });
-  return res.data;
+  const { data, error } = await db()
+    .from('ritual_accounts')
+    .upsert(rows, { onConflict: 'week_of,account_id' })
+    .select();
+  check(error, 'upsertSnapshot');
+  return data;
 }
 
-// ── Notes (threaded) ───────────────────────────────────────────────
+// ── Notes ──────────────────────────────────────────────────────────
 export async function getNotes(accountIds) {
-  const c = client();
-  const params = { select: '*', order: 'created_at.asc' };
-  if (accountIds && accountIds.length) {
-    params.account_id = `in.(${accountIds.join(',')})`;
-  }
-  const res = await c.get('/ritual_notes', { params });
-  return res.data;
+  const q = db().from('ritual_notes').select('*').order('created_at', { ascending: true });
+  if (accountIds?.length) q.in('account_id', accountIds);
+  const { data, error } = await q;
+  check(error, 'getNotes');
+  return data;
 }
 
 export async function addNote({ account_id, author, body }) {
-  const c = client();
-  const res = await c.post('/ritual_notes', [{ account_id, author, body }], {
-    headers: { Prefer: 'return=representation' },
-  });
-  return res.data[0];
+  const { data, error } = await db()
+    .from('ritual_notes')
+    .insert([{ account_id, author, body }])
+    .select()
+    .single();
+  check(error, 'addNote');
+  return data;
 }
 
 export async function deleteNote(id) {
-  const c = client();
-  await c.delete('/ritual_notes', { params: { id: `eq.${id}` } });
+  const { error } = await db().from('ritual_notes').delete().eq('id', id);
+  check(error, 'deleteNote');
   return { ok: true };
 }
 
-// ── Contacted flag ─────────────────────────────────────────────────
+// ── Contacted ──────────────────────────────────────────────────────
 export async function getContacted() {
-  const c = client();
-  const res = await c.get('/ritual_contacted', { params: { select: '*' } });
-  return res.data;
+  const { data, error } = await db().from('ritual_contacted').select('*');
+  check(error, 'getContacted');
+  return data;
 }
 
 export async function setContacted({ account_id, contacted, contacted_by }) {
-  const c = client();
   const row = {
     account_id,
     contacted,
     contacted_by: contacted ? contacted_by : null,
     contacted_at: contacted ? new Date().toISOString() : null,
   };
-  const res = await c.post('/ritual_contacted', [row], {
-    params: { on_conflict: 'account_id' },
-    headers: { Prefer: 'resolution=merge-duplicates,return=representation' },
-  });
-  return res.data[0];
+  const { data, error } = await db()
+    .from('ritual_contacted')
+    .upsert([row], { onConflict: 'account_id' })
+    .select()
+    .single();
+  check(error, 'setContacted');
+  return data;
 }
