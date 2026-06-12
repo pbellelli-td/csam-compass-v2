@@ -33,8 +33,7 @@ router.get('/weeks', async (_req, res) => {
   }
 });
 
-// Get accounts + notes + contacted for a week (defaults to latest).
-// Returns a merged view ready for the client.
+// Get accounts + notes + contacted for a week (defaults to latest)
 router.get('/', async (req, res) => {
   if (!guard(res)) return;
   try {
@@ -51,9 +50,8 @@ router.get('/', async (req, res) => {
     const [notes, contacted] = await Promise.all([getNotes(ids), getContacted()]);
 
     const notesByAccount = {};
-    for (const n of notes) {
-      (notesByAccount[n.account_id] ||= []).push(n);
-    }
+    for (const n of notes) (notesByAccount[n.account_id] ||= []).push(n);
+
     const contactedByAccount = {};
     for (const c of contacted) contactedByAccount[c.account_id] = c;
 
@@ -72,14 +70,12 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Push a weekly snapshot (used by the Monday run)
+// Push a weekly snapshot
 router.post('/snapshot', async (req, res) => {
   if (!guard(res)) return;
   try {
     const { rows } = req.body;
-    if (!Array.isArray(rows) || !rows.length) {
-      return res.status(400).json({ error: 'rows[] required' });
-    }
+    if (!Array.isArray(rows) || !rows.length) return res.status(400).json({ error: 'rows[] required' });
     const saved = await upsertSnapshot(rows);
     res.json({ ok: true, count: saved.length });
   } catch (err) {
@@ -93,9 +89,7 @@ router.post('/notes', async (req, res) => {
   if (!guard(res)) return;
   try {
     const { account_id, author, body } = req.body;
-    if (!account_id || !author || !body) {
-      return res.status(400).json({ error: 'account_id, author, body required' });
-    }
+    if (!account_id || !author || !body) return res.status(400).json({ error: 'account_id, author, body required' });
     res.json(await addNote({ account_id, author, body }));
   } catch (err) {
     console.error('[POST /ritual/notes]', err.message);
